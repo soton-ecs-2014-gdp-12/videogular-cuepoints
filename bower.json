@@ -1,0 +1,18 @@
+{
+	"name": "videogular-cuepoints",
+	"homepage": "https://github.com/HarryCutts/videogular-cuepoints",
+	"description": "Videogular plugin for displaying marks on a video's scrub bar",
+	"license": "MIT",
+	"authors": [
+		{ "name": "Harry Cutts" }
+	],
+
+	"main": "cuepoints.js",
+	"dependencies": {
+		"videogular-controls": "latest"
+	},
+	"ignore": [
+		"**/.*",
+		"**/*.md"
+	]
+}
