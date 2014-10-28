@@ -1,7 +1,7 @@
 videogular-cuepoints
 ====================
 
-Videogular Cuepoints is a [Videogular](http://videogular.com/) plugin for displaying 'cuepoints', marks on the scrub bar which can be positioned at a particular time. For example, cuepoints could be used to indicate the start of a section in the video, or a time when a popup will appear.
+Videogular Cuepoints is a [Videogular](http://videogular.com/) plugin for displaying 'cuepoints', marks on the scrub bar which can be positioned at a particular time. For example, cuepoints could be used to indicate the start of a section in the video, or a time when a pop-up will appear.
 
 Usage
 -----
@@ -49,3 +49,16 @@ plugins: {
 	},
 },
 ```
+
+Styling cuepoints
+-----------------
+
+Each cuepoint is a `<vg-cuepoint>` element, and can be styled accordingly. You can see how they're styled by default in `cuepoints.css`. For example, if you wanted to change the color of the cuepoints to blue, you might write the following in your CSS file:
+
+```css
+videogular vg-cuepoints vg-cuepoint {
+	background-color: blue;
+}
+```
+
+You should be able to change any CSS properties without causing problems, except `position`. (`left` can be set but will always be overridden when the cuepoint is positioned.)
