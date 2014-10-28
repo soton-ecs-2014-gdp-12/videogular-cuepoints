@@ -3,6 +3,15 @@ videogular-cuepoints
 
 Videogular Cuepoints is a [Videogular](http://videogular.com/) plugin for displaying 'cuepoints', marks on the scrub bar which can be positioned at a particular time. For example, cuepoints could be used to indicate the start of a section in the video, or a time when a pop-up will appear.
 
+Installation
+------------
+
+Videogular Cuepoints can be installed with Bower:
+
+```
+bower install videogular-cuepoints
+```
+
 Usage
 -----
 
@@ -39,7 +48,7 @@ With the following added to your `$scope.config` object:
 plugins: {
 	cuepoints: {
 		theme: {
-			url: "lib/videogular-cuepoints/cuepoints.css",
+			url: "bower_components/videogular-cuepoints/cuepoints.css",
 				// Replace with the path appropriate to your project
 		},
 		points: [
