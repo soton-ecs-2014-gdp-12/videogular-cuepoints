@@ -1,6 +1,5 @@
 videogular vg-cuepoints {
 	position: relative;
-	top: -50px;
 
 	display: block;
 	width: 100%;
@@ -9,10 +8,11 @@ videogular vg-cuepoints {
 
 videogular vg-cuepoints vg-cuepoint {
 	position: absolute;
+	top: -16px;
 
 	display: block;
 	width: 2px;
-	height: 50px;
+	height: 30px;
 
 	background-color: red;
 }
