@@ -9,7 +9,7 @@
 
 	"main": "cuepoints.js",
 	"dependencies": {
-		"videogular-controls": "latest"
+		"videogular-controls": "1.x"
 	},
 	"ignore": [
 		"**/.*",
