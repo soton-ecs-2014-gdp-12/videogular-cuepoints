@@ -1,7 +1,9 @@
 videogular-cuepoints
 ====================
 
-Videogular Cuepoints is a [Videogular](http://videogular.com/) plugin for displaying 'cuepoints', marks on the scrub bar which can be positioned at a particular time. For example, cuepoints could be used to indicate the start of a section in the video, or a time when a pop-up will appear.
+Videogular Cuepoints is a [Videogular](http://videogular.com/) plugin for displaying 'cuepoints', marks on the scrub bar which can be positioned at a particular time. For example, cuepoints could be used to **indicate** the start of a section in the video, or a time when a pop-up will appear.
+
+**Not to be confused with ["Videogular Cue Points"](http://www.videogular.com/tutorials/videogular-cue-points-synchronize-video-with-twitter/)**, a completely different feature of Videogular implemented long after the release of this plugin.
 
 Installation
 ------------
