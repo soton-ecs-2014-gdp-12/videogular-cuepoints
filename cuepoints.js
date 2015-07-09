@@ -24,7 +24,7 @@ angular.module('uk.ac.soton.ecs.videogular.plugins.cuepoints', [])
 					$scope.calcLeft = function(cuepoint) {
 						if (API.totalTime === 0) return '-1000';
 
-						var videoLength = API.totalTime.getTime() / 1000;
+						var videoLength = API.totalTime / 1000;
 						return (cuepoint.time * 100 / videoLength).toString();
 					};
 
