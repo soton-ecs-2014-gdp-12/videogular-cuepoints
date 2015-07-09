@@ -19,27 +19,35 @@ First, import the JavaScript file `cuepoints.js`, then add the dependency `uk.ac
 
 Next, add a `<vg-cuepoints>` element as a child of the `<vg-scrubbar>` of your Videogular player. Its `vg-cuepoints-config` attribute should be an object in your parent scope containing the cuepoints (see below), and the `vg-cuepoints-theme` attribute should point to the URL of a CSS file, just like Videogular's [`vg-theme` attribute](https://github.com/2fdevs/videogular/wiki/Themes).
 
-For example, [Videogular's example 2](http://videogular.com/examples/example02.html) with cuepoints added would look like this:
+For example, [Videogular's example 2](http://www.videogular.com/examples/controls-plugin/) with cuepoints added would look like this:
 
 ```html
-<videogular vg-player-ready="onPlayerReady" vg-theme="config.theme.url">
-	<vg-video vg-src="config.sources"></vg-video>
+...
+<videogular vg-theme="controller.config.theme.url">
+	<vg-media vg-src="controller.config.sources"
+			  vg-tracks="controller.config.tracks">
+	</vg-media>
 
-	<vg-controls vg-autohide="config.autoHide" vg-autohide-time="config.autoHideTime">
+	<vg-controls vg-autohide="controller.config.plugins.controls.autoHide" vg-autohide-time="controller.config.plugins.controls.autoHideTime">
 		<vg-play-pause-button></vg-play-pause-button>
-		<vg-timedisplay>{{ API.currentTime | date:'mm:ss' }}</vg-timedisplay>
-		<vg-scrubBar>
-			<vg-scrubbarcurrenttime></vg-scrubbarcurrenttime>
-			<vg-cuepoints vg-cuepoints-config="config.plugins.cuepoints" vg-cuepoints-theme="config.plugins.cuepoints.theme.url"></vg-cuepoints>
-		</vg-scrubBar>
-		<vg-timedisplay>{{ API.timeLeft | date:'mm:ss' }}</vg-timedisplay>
+		<vg-time-display>{{ currentTime | date:'mm:ss' }}</vg-time-display>
+		<vg-scrub-bar>
+			<vg-scrub-bar-current-time></vg-scrub-bar-current-time>
+			<vg-cuepoints vg-cuepoints-config="controller.config.plugins.cuepoints"
+						  vg-cuepoints-theme="controller.config.plugins.cuepoints.theme.url">
+			</vg-cuepoints>
+		</vg-scrub-bar>
+		<vg-time-display>{{ timeLeft | date:'mm:ss' }}</vg-time-display>
+		<vg-time-display>{{ totalTime | date:'mm:ss' }}</vg-time-display>
 		<vg-volume>
-			<vg-mutebutton></vg-mutebutton>
-			<vg-volumebar></vg-volumebar>
+			<vg-mute-button></vg-mute-button>
+			<vg-volume-bar></vg-volume-bar>
 		</vg-volume>
-		<vg-fullscreenButton></vg-fullscreenButton>
+		<vg-playback-button></vg-playback-button>
+		<vg-fullscreen-button></vg-fullscreen-button>
 	</vg-controls>
 </videogular>
+...
 ```
 
 With the following added to your `$scope.config` object:
@@ -52,12 +60,14 @@ plugins: {
 				// Replace with the path appropriate to your project
 		},
 		points: [
-			{ time:  18 },
-			{ time: 100 },
+			{ time: 18 },
+			{ time: 60 },
 		],
 	},
 },
 ```
+
+[A complete example can be found here.][example]
 
 Styling cuepoints
 -----------------
@@ -71,3 +81,5 @@ videogular vg-cuepoints vg-cuepoint {
 ```
 
 You should be able to change any CSS properties without causing problems, except `position`. (`left` can be set but will always be overridden when the cuepoint is positioned.)
+
+[example]: https://github.com/HarryCutts/videogular-cuepoints-example
