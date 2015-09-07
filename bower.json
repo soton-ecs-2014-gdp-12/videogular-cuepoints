@@ -8,9 +8,9 @@
 	],
 
 	"main": [
-    "cuepoints.js",
-    "cuepoints.css"
-  ],
+    		"cuepoints.js",
+    		"cuepoints.css"
+  	],
 	"dependencies": {
 		"videogular-controls": "1.x"
 	},
