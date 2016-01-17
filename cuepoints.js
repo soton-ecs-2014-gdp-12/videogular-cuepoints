@@ -28,6 +28,10 @@ angular.module('uk.ac.soton.ecs.videogular.plugins.cuepoints', [])
 						return (cuepoint.time * 100 / videoLength).toString();
 					};
 
+					$scope.onCuePointClick = function(cuepoint){
+						API.seekTime(cuepoint.time);
+					};
+
 					updateTheme($scope.theme);
 				},
 			};
