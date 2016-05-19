@@ -1,3 +1,5 @@
+**No longer the main repository; please use and contribute to [HarryCutts/videogular-cuepoints](https://github.com/HarryCutts/videogular-cuepoints/) instead.**
+
 videogular-cuepoints
 ====================
 
